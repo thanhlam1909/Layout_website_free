@@ -1,0 +1,162 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    /* Black text by default */
+}
+
+
+/* Đặt nền của offcanvas thành màu xanh */
+
+.offcanvas {
+    background-color: #1e9ed1 !important;
+    /* Xanh lá */
+    color: white !important;
+    /* Chữ màu trắng */
+}
+
+
+/* Đảm bảo màu nền của offcanvas header là xanh */
+
+.offcanvas-header {
+    background-color: #1e9ed1 !important;
+    /* Xanh lá */
+    color: white !important;
+    /* Chữ màu trắng */
+}
+
+
+/* Màu chữ trong phần offcanvas body */
+
+.offcanvas-body {
+    color: white !important;
+    /* Chữ màu trắng */
+}
+
+
+/* Màu cho các mục trong danh mục */
+
+.offcanvas-body a {
+    color: white !important;
+}
+
+
+/* Màu cho các mục trong danh mục khi hover */
+
+.offcanvas-body a:hover {
+    color: #f8f9fa !important;
+    /* Màu chữ sáng hơn khi hover */
+}
+
+@media (max-width: 576px) {
+    body {
+        color: #fff;
+        /* White text for small screens */
+    }
+}
+
+
+/* For medium screens */
+
+@media (max-width: 992px) {
+    body {
+        color: #333;
+        /* Dark gray text for medium screens */
+    }
+}
+
+
+/* For large screens */
+
+@media (min-width: 1200px) {
+    body {
+        color: #000;
+        /* Black text for large screens */
+    }
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.login-card {
+    max-width: 400px;
+    margin: auto;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+#auth-container {
+    max-width: 800px;
+    /* Thay đổi chiều rộng tối đa */
+    width: 100%;
+    /* Đảm bảo nó chiếm toàn bộ chiều rộng có sẵn */
+}
+
+.logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.navbar-brand h4 {
+    margin: 0;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 10px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-dropdown-menu {
+    min-width: 100%;
+    left: 0 !important;
+    right: auto;
+    top: 100%;
+    z-index: 1050;
+}
+
+.header-bottom {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-divider {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    height: 24px;
+    margin: 0 10px;
+}
+
+#auth-container.cart-layout {
+    max-width: none;
+    /* bỏ giới hạn */
+}

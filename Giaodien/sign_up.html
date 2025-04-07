@@ -1,0 +1,82 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký tài khoản mới | MySecureApp</title>
+    <meta name="description" content="Tạo tài khoản mới tại MySecureApp để trải nghiệm mua sắm an toàn, nhanh chóng và tiện lợi." />
+    <meta name="keywords" content="đăng ký, tạo tài khoản, sign up, đăng ký nhanh, MySecureApp" />
+    <meta name="author" content="MySecureApp Team" />
+    <meta property="og:title" content="Đăng ký tài khoản mới tại MySecureApp" />
+    <meta property="og:description" content="Truy cập ngay trải nghiệm an toàn và nhiều ưu đãi hấp dẫn chỉ dành riêng cho thành viên mới." />
+    <meta property="og:image" content="https://example.com/images/og-register.jpg" />
+    <meta property="og:url" content="https://mysecureapp.vn/sign-up" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tạo tài khoản mới tại MySecureApp" />
+    <meta name="twitter:description" content="Gia nhập ngay để nhận ưu đãi thành viên và quản lý đơn hàng thông minh hơn." />
+    <meta name="twitter:image" content="https://example.com/images/twitter-register.jpg" />
+</head>
+<div class="container">
+    <!-- Phần điều hướng -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-dark">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Đăng Ký</li>
+        </ol>
+    </nav>
+    <div id="auth-container" class="card login-card shadow-lg p-4">
+        <h5 class="card-title text-center mb-4" id="formTitle">
+            Đăng Ký Tài Khoản Mới
+        </h5>
+        <p class="text-center mb-4">Trở thành thành viên MySecureApp để nhận nhiều ưu đãi hấp dẫn và trải nghiệm dịch vụ an toàn.</p>
+
+        <form id="authForm" class="login-card">
+            <div class="mb-3">
+                <label for="name" class="form-label">
+              <span class="material-icons">person</span> Họ và Tên
+          </label>
+                <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên của bạn" required />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">
+              <span class="material-icons">email</span> Địa chỉ Email
+          </label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">
+              <span class="material-icons">vpn_key</span> Mật khẩu
+          </label>
+                <input type="password" class="form-control" id="password" placeholder="Mật khẩu của bạn" required />
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+              <span class="material-icons">login</span> Đăng Ký
+          </button>
+            </div>
+        </form>
+        <div class="text-center mt-3">
+            <small>
+          Bạn đã có tài khoản?
+          <a href="#login">Đăng nhập</a>
+      </small>
+        </div>
+        <div class="text-center mt-3">
+            <small>
+          <strong>Hoặc đăng ký với:</strong>
+      </small>
+            <!-- Các liên kết mạng xã hội với tooltip -->
+            <div class="d-flex justify-content-center mt-2">
+                <a href="#" class="btn btn-outline-dark m-2" data-bs-toggle="tooltip" title="Đăng nhập với Google">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="btn btn-outline-dark m-2" data-bs-toggle="tooltip" title="Đăng nhập với Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="btn btn-outline-dark m-2" data-bs-toggle="tooltip" title="Đăng nhập với Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

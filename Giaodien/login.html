@@ -1,0 +1,74 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập | MySecureApp</title>
+    <meta name="description" content="Đăng nhập vào MySecureApp để truy cập tài khoản, quản lý đơn hàng và nhiều tiện ích khác." />
+    <meta name="keywords" content="đăng nhập, login, tài khoản, MySecureApp, bảo mật" />
+    <meta name="author" content="MySecureApp Team" />
+    <meta property="og:title" content="Đăng nhập vào MySecureApp" />
+    <meta property="og:description" content="Truy cập nhanh chóng và an toàn vào tài khoản của bạn." />
+    <meta property="og:image" content="https://example.com/images/og-login.jpg" />
+    <meta property="og:url" content="https://mysecureapp.vn/login" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Đăng nhập vào MySecureApp" />
+    <meta name="twitter:description" content="Truy cập nhanh chóng và an toàn vào tài khoản của bạn." />
+    <meta name="twitter:image" content="https://example.com/images/twitter-login.jpg" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+<div class="container">
+    <!-- Phần điều hướng -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-dark">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Đăng nhập</li>
+        </ol>
+    </nav>
+    <div id="auth-container" class="card login-card shadow-lg p-4">
+        <h5 class="card-title text-center mb-4" id="formTitle">
+            Login to your account
+        </h5>
+        <form id="authForm" class="login-card">
+            <div id="nameField" class="mb-3 d-none">
+                <label for="name" class="form-label"><span class="material-icons">person</span> Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your full name" />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label"><span class="material-icons">email</span> Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"><span class="material-icons">vpn_key</span> Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Your password" />
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+              <span class="material-icons">login</span> Login
+          </button>
+            </div>
+        </form>
+
+        <!-- Các nút đăng nhập mạng xã hội chỉ với logo -->
+        <div class="d-flex justify-content-center mt-4">
+            <!-- Google -->
+            <button class="btn btn-outline-danger mx-2 p-3" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
+          <i class="fab fa-google text-danger"></i>
+      </button>
+            <!-- Facebook -->
+            <button class="btn btn-outline-primary mx-2 p-3" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
+          <i class="fab fa-facebook-f text-primary"></i>
+      </button>
+            <!-- Twitter -->
+            <button class="btn btn-outline-info mx-2 p-3" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
+          <i class="fab fa-twitter text-info"></i>
+      </button>
+        </div>
+
+        <div class="text-center mt-3">
+            <small>
+          Don't have an account?
+          <a href="#sign_up">Đăng kí</a>
+      </small>
+        </div>
+    </div>
+</div>
