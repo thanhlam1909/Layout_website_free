@@ -7,8 +7,8 @@
     <title>Login Page</title>
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -46,7 +46,7 @@
                         <!-- Offcanvas Menu (for mobile) -->
                         <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
                             <div class="offcanvas-header">
-                                <div class="offcanvas-header d-flex justify-content-between align-items-center w-100">
+                                <div class="d-flex justify-content-between align-items-center w-100">
                                     <!-- Phần trái: Tiêu đề Menu -->
                                     <div class="offcanvas-title flex-grow-1" id="mobileMenuLabel">
                                         <h5 class="mb-0">MyWebsite</h5>
@@ -58,11 +58,8 @@
                                             <!-- Số lượng sản phẩm trong giỏ -->
                                         </a>
                                     </div>
-                                    <!-- Phần giữa: Nút đóng -->
+                                    <!-- Nút đóng -->
                                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
-                                    <!-- Phần phải: Giỏ hàng -->
-
                                 </div>
                             </div>
                             <div class="offcanvas-body">
@@ -71,87 +68,94 @@
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
                                         <button class="btn btn-light" type="button">
-                                        <span class="material-icons">search</span>
+                                            <span class="material-icons">search</span>
                                         </button>
                                     </div>
                                 </div>
 
                                 <!-- Danh mục Dropdown (Mobile) -->
                                 <div class="mb-3">
-                                    <a class="d-flex align-items-center text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#categoryMenu" aria-expanded="false" aria-controls="categoryMenu">
+                                    <a class="mb-2 d-flex align-items-center text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#categoryMenu" aria-expanded="false" aria-controls="categoryMenu">
                                         <span class="material-icons me-2">category</span>
-                                        <span class="ms-1">Danh mục</span>
+                                        <span>Danh mục</span>
                                     </a>
-                                    <div class="collapse" id="categoryMenu">
+                                    <div class="collapse mt-2" id="categoryMenu">
                                         <!-- Các mục con trong danh mục -->
                                         <ul class="list-unstyled ps-3">
-                                            <li>
+                                            <li class="mb-2">
                                                 <a class="text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#fashionMen" aria-expanded="false" aria-controls="fashionMen">
                                                     Thời trang nam
                                                 </a>
-                                                <div class="collapse" id="fashionMen">
+                                                <div class="collapse mt-2" id="fashionMen">
                                                     <ul class="list-unstyled ps-3">
-                                                        <li><a class="text-white text-decoration-none" href="#">Áo sơ mi</a></li>
-                                                        <li><a class="text-white text-decoration-none" href="#">Quần jeans</a></li>
-                                                        <li><a class="text-white text-decoration-none" href="#">Giày thể thao</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Áo sơ mi</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Quần jeans</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Giày thể thao</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li class="mb-2">
                                                 <a class="text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#fashionWomen" aria-expanded="false" aria-controls="fashionWomen">
                                                     Thời trang nữ
                                                 </a>
-                                                <div class="collapse" id="fashionWomen">
+                                                <div class="collapse mt-2" id="fashionWomen">
                                                     <ul class="list-unstyled ps-3">
-                                                        <li><a class="text-white text-decoration-none" href="#">Đầm dạ hội</a></li>
-                                                        <li><a class="text-white text-decoration-none" href="#">Túi xách</a></li>
-                                                        <li><a class="text-white text-decoration-none" href="#">Giày cao gót</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Đầm dạ hội</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Túi xách</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Giày cao gót</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li class="mb-2">
                                                 <a class="text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#accessories" aria-expanded="false" aria-controls="accessories">
                                                     Phụ kiện
                                                 </a>
-                                                <div class="collapse" id="accessories">
+                                                <div class="collapse mt-2" id="accessories">
                                                     <ul class="list-unstyled ps-3">
-                                                        <li><a class="text-white text-decoration-none" href="#">Đồng hồ</a></li>
-                                                        <li><a class="text-white text-decoration-none" href="#">Mắt kính</a></li>
-                                                        <li><a class="text-white text-decoration-none" href="#">Nón</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Đồng hồ</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Mắt kính</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Nón</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
+                                </div>
 
-                                    <!-- User Dropdown (inside offcanvas) -->
-                                    <div class="mb-3">
-                                        <a class="d-flex align-items-center text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#accountMenu" aria-expanded="false" aria-controls="accountMenu">
-                                            <span class="material-icons me-2">account_circle</span>
-                                            <span class="ms-1">Tài khoản</span>
-                                        </a>
-                                        <div class="collapse" id="accountMenu">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="text-white text-decoration-none" href="#login"><span class="material-icons me-2">login</span>Đăng nhập</a></li>
-                                                <li><a class="text-white text-decoration-none" href="#sign_up"><span class="material-icons me-2">person_add</span>Đăng ký</a></li>
-                                                <li><a class="text-white text-decoration-none" href="#"><span class="material-icons me-2">history</span>Lịch sử giao dịch</a></li>
-                                                <li><a class="text-white text-decoration-none" href="#"><span class="material-icons me-2">settings</span>Cài đặt</a></li>
-                                                <li>
-                                                    <hr class="dropdown-divider">
-                                                </li>
-                                                <li><a class="text-danger text-decoration-none" href="#"><span class="material-icons me-2">logout</span>Đăng xuất</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- Additional Links (in offcanvas) -->
-                                    <div class="d-flex flex-column">
-                                        <a href="#" class="text-white text-decoration-none mb-3">Miễn phí vận chuyển</a>
-                                        <a href="#" class="text-white text-decoration-none mb-3">Bảo hành</a>
-                                        <a href="#" class="text-white text-decoration-none">Chất lượng đảm bảo</a>
+                                <!-- User Dropdown (inside offcanvas) -->
+                                <div class="mb-3">
+                                    <a class="mb-2 d-flex align-items-center text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#accountMenu" aria-expanded="false" aria-controls="accountMenu">
+                                        <span class="material-icons me-2">account_circle</span>
+                                        <span>Tài khoản</span>
+                                    </a>
+                                    <div class="collapse mt-2" id="accountMenu">
+                                        <ul class="list-unstyled ps-3">
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#login"><span class="material-icons me-2">login</span>Đăng nhập</a></li>
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#sign_up"><span class="material-icons me-2">person_add</span>Đăng ký</a></li>
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#"><span class="material-icons me-2">history</span>Lịch sử giao dịch</a></li>
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#"><span class="material-icons me-2">settings</span>Cài đặt</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li class="mb-2"><a class="text-danger text-decoration-none" href="#"><span class="material-icons me-2">logout</span>Đăng xuất</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+
+                                <!-- Additional Links (in offcanvas) -->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-white text-decoration-none mb-2">
+                                        <span class="material-icons me-2">local_shipping</span> Miễn phí vận chuyển
+                                    </a>
+                                    <a href="#" class="text-white text-decoration-none mb-2">
+                                        <span class="material-icons me-2">verified</span> Bảo hành
+                                    </a>
+                                    <a href="#" class="text-white text-decoration-none mb-2">
+                                        <span class="material-icons me-2">star</span> Chất lượng đảm bảo
+                                    </a>
+                                </div>
                             </div>
+                        </div>
                     </section>
                     <div class="search-box mx-3 d-none d-md-block">
                         <div class="input-group">
@@ -177,25 +181,71 @@
                             <!-- User Dropdown with updated design -->
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="material-icons">account_circle</span>
-                                    <span class="ms-1">Tài khoản</span>
+                                    <span class="material-icons me-2">account_circle</span>
+                                    <span>Tài khoản</span>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
-                                    <li><a class="dropdown-item" href="#login"><span class="material-icons me-2">login</span>Đăng nhập</a></li>
-                                    <li><a class="dropdown-item" href="#sign_up"><span class="material-icons me-2">person_add</span>Đăng ký</a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="material-icons me-2">history</span>Lịch sử giao dịch</a></li>
-                                    <li><a class="dropdown-item" href="#"><span class="material-icons me-2">settings</span>Cài đặt</a></li>
-                                    <!-- Added an option for settings -->
+                                <!-- Thêm các class animation và border -->
+                                <ul class="dropdown-menu dropdown-menu-end shadow border border-primary rounded-3 animate__animated animate__fadeInUp animate__faster" aria-labelledby="userDropdown">
+                                    <!-- Thêm header với nền gradient -->
+                                    <li>
+                                        <div class="dropdown-item bg-gradient-primary  py-2 rounded-top-2">
+                                            <div class="d-flex align-items-center ">
+                                                <span class="material-icons me-2 ">person</span>
+                                                <span>Thông tin cá nhân</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Thêm hover effect cho các item -->
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#login">
+                                            <span class="material-icons me-2 text-primary">login</span>
+                                            <span>Đăng nhập</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#sign_up">
+                                            <span class="material-icons me-2 text-success">person_add</span>
+                                            <span>Đăng ký</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- Thêm divider -->
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item text-danger" href="#"><span class="material-icons me-2">logout</span>Đăng xuất</a></li>
+
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#">
+                                            <span class="material-icons me-2 text-info">history</span>
+                                            <span>Lịch sử giao dịch</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#">
+                                            <span class="material-icons me-2 text-secondary">settings</span>
+                                            <span>Cài đặt</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- Thêm divider -->
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <!-- Nút đăng xuất với hover effect đặc biệt -->
+                                    <li>
+                                        <a class="dropdown-item text-danger hover-bg-danger-subtle d-flex align-items-center py-2" href="#">
+                                            <span class="material-icons me-2">logout</span>
+                                            <span>Đăng xuất</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                     </div>
-                    </div>
+                </div>
             </nav>
 
             <!-- Bottom Header with Categories (hidden on mobile) -->
@@ -292,11 +342,11 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     </header>
     <main class="d-flex align-items-center justify-content-center  ">
 
-        <div id="auth-container" class="card cart-layout shadow-lg p-4">
+        <div id="auth-container" class="card cart-layout shadow-lg p-4" style="width:80%;">
             <!-- Nội dung đăng nhập -->
         </div>
 

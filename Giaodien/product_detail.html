@@ -1,0 +1,114 @@
+<div class="container mt-4">
+    <div class="row">
+        <!-- Cột ảnh sản phẩm -->
+        <div class="col-md-6">
+            <section class="product-images">
+                <img src="product-image.jpg" alt="Tên sản phẩm" class="img-fluid mb-3">
+                <div class="thumbnail-gallery d-flex gap-2">
+                    <img src="thumbnail1.jpg" alt="Thumbnail 1" class="img-thumbnail" style="width: 80px;">
+                    <img src="thumbnail2.jpg" alt="Thumbnail 2" class="img-thumbnail" style="width: 80px;">
+                    <img src="thumbnail3.jpg" alt="Thumbnail 3" class="img-thumbnail" style="width: 80px;">
+                </div>
+
+                <!-- Giả modal dưới ảnh -->
+                <div class="bg-light p-3 mt-3 rounded shadow-sm" style="opacity: 0.7;">
+                    <h6 class="mb-1">Thông tin chi tiết sản phẩm</h6>
+                    <p class="text-muted small mb-0">Chất liệu: Nhựa cao cấp...</p>
+                    <button id="openModalButton" class="btn btn-link text-center d-block mx-auto mt-2" style="font-size: 1.2rem;">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Cột thông tin sản phẩm -->
+        <div class="col-md-6">
+            <section class="product-info">
+                <h1 class="product-name">Tên Sản Phẩm</h1>
+                <p class="product-type">Loại sản phẩm: <span>Điện tử</span></p>
+
+                <div class="pricing mb-3">
+                    <span class="text-muted text-decoration-line-through">1.500.000 VNĐ</span>
+                    <span class="text-danger fw-bold ms-2">1.200.000 VNĐ</span>
+                </div>
+
+                <div class="rating mb-3">
+                    <span class="stars text-warning">★★★★☆</span>
+                    <span class="rating-count">(4.5/5 - 120 đánh giá)</span>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary mb-2">Thêm vào giỏ hàng</button>
+                    <button class="btn btn-success mb-2">Mua ngay</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chi tiết sản phẩm -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productDetailsModalLabel">Thông tin chi tiết sản phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Chất liệu: Nhựa cao cấp</li>
+                    <li class="list-group-item">Kích thước: 20x15x5 cm</li>
+                    <li class="list-group-item">Trọng lượng: 300g</li>
+                    <li class="list-group-item">Bảo hành: 12 tháng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Đánh giá khách hàng -->
+<section class="product-reviews mt-5">
+    <h2 class="h4 border-start border-primary ps-3 mb-4">Đánh giá từ khách hàng</h2>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h6 class="card-title mb-1">Nguyễn Văn A</h6>
+            <div class="text-warning mb-2">★★★★★</div>
+            <p class="card-text">Sản phẩm rất tốt, đáng tiền!</p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h6 class="card-title mb-1">Trần Thị B</h6>
+            <div class="text-warning mb-2">★★★★☆</div>
+            <p class="card-text">Giao hàng nhanh, chất lượng ổn.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sản phẩm liên quan -->
+<section class="related-products mt-5">
+    <h2 class="h4 border-start border-success ps-3 mb-4">Sản phẩm liên quan</h2>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card h-100 text-center">
+                <img src="related1.jpg" class="card-img-top" alt="Sản phẩm liên quan 1">
+                <div class="card-body">
+                    <h6 class="card-title">Sản phẩm liên quan 1</h6>
+                    <p class="text-danger fw-bold">900.000 VNĐ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 text-center">
+                <img src="related2.jpg" class="card-img-top" alt="Sản phẩm liên quan 2">
+                <div class="card-body">
+                    <h6 class="card-title">Sản phẩm liên quan 2</h6>
+                    <p class="text-danger fw-bold">1.000.000 VNĐ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

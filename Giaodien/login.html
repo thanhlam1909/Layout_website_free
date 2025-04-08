@@ -20,33 +20,40 @@
     <!-- Phần điều hướng -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html" class="text-dark">Trang chủ</a></li>
+            <li class="breadcrumb-item "><a href="index.html" class="text-dark text-decoration-none">Trang chủ</a></li>
             <li class="breadcrumb-item active" aria-current="page">Đăng nhập</li>
         </ol>
     </nav>
     <div id="auth-container" class="card login-card shadow-lg p-4">
         <h5 class="card-title text-center mb-4" id="formTitle">
-            Login to your account
+            Đăng nhập
         </h5>
         <form id="authForm" class="login-card">
             <div id="nameField" class="mb-3 d-none">
-                <label for="name" class="form-label"><span class="material-icons">person</span> Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Your full name" />
+                <label for="name" class="form-label">
+                    <span class="material-icons">person</span> Họ và tên
+                </label>
+                <input type="text" class="form-control" id="name" placeholder="Họ và tên của bạn" />
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label"><span class="material-icons">email</span> Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+                <label for="email" class="form-label">
+                    <span class="material-icons">email</span> Địa chỉ Email
+                </label>
+                <input type="email" class="form-control" id="email" placeholder="ban@example.com" />
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label"><span class="material-icons">vpn_key</span> Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Your password" />
+                <label for="password" class="form-label">
+                    <span class="material-icons">vpn_key</span> Mật khẩu
+                </label>
+                <input type="password" class="form-control" id="password" placeholder="Mật khẩu của bạn" />
             </div>
             <div class="d-grid">
                 <button type="submit" class="btn btn-primary" id="submitBtn">
-              <span class="material-icons">login</span> Login
-          </button>
+                    <span class="material-icons">login</span> Đăng nhập
+                </button>
             </div>
         </form>
+
 
         <!-- Các nút đăng nhập mạng xã hội chỉ với logo -->
         <div class="d-flex justify-content-center mt-4">
