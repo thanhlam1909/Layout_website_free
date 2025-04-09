@@ -3,15 +3,33 @@
         <!-- Cột ảnh sản phẩm -->
         <div class="col-md-6">
             <section class="product-images">
-                <img src="product-image.jpg" alt="Tên sản phẩm" class="img-fluid mb-3">
-                <div class="thumbnail-gallery d-flex gap-2">
-                    <img src="thumbnail1.jpg" alt="Thumbnail 1" class="img-thumbnail" style="width: 80px;">
-                    <img src="thumbnail2.jpg" alt="Thumbnail 2" class="img-thumbnail" style="width: 80px;">
-                    <img src="thumbnail3.jpg" alt="Thumbnail 3" class="img-thumbnail" style="width: 80px;">
+                <img src="./img/logo.jfif" alt="Tên sản phẩm" class="img-fluid  mx-auto d-block" style="width: 300px; height: 300px; object-fit: contain;">
+
+                <!-- Danh sách ảnh gốc ẩn đi -->
+                <div id="allThumbnails" class="d-none class=" thumbnail-img "">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 1">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 2">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 3">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 4">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 5">
+                    <img class="thumbnail-img" src="./img/hinh_mau_laptop.webp" alt="Thumbnail 6">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 7">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 8">
+
                 </div>
 
-                <!-- Giả modal dưới ảnh -->
-                <div class="bg-light p-3 mt-3 rounded shadow-sm" style="opacity: 0.7;">
+                <!-- Thumbnail ngang + 2 nút hai bên -->
+                <div class="d-flex align-items-center justify-content-center gap-2 my-1">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="prevThumbnails()">←</button>
+                    <div id="thumbnailGallery" class="d-flex gap-2 flex-shrink-1">
+                        <!-- Render bằng JS -->
+                    </div>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="nextThumbnails()">→</button>
+                </div>
+
+
+                <!-- Mô tả -->
+                <div class="bg-light p-3 mt-3 rounded shadow-sm" style="opacity: 0.5;">
                     <h6 class="mb-1">Thông tin chi tiết sản phẩm</h6>
                     <p class="text-muted small mb-0">Chất liệu: Nhựa cao cấp...</p>
                     <button id="openModalButton" class="btn btn-link text-center d-block mx-auto mt-2" style="font-size: 1.2rem;">
@@ -93,7 +111,7 @@
     <div class="row g-3">
         <div class="col-md-6">
             <div class="card h-100 text-center">
-                <img src="related1.jpg" class="card-img-top" alt="Sản phẩm liên quan 1">
+                <img src="./img/hinh_mau_laptop.webp" class="card-img-top" alt="Sản phẩm liên quan 1">
                 <div class="card-body">
                     <h6 class="card-title">Sản phẩm liên quan 1</h6>
                     <p class="text-danger fw-bold">900.000 VNĐ</p>
@@ -103,7 +121,7 @@
 
         <div class="col-md-6">
             <div class="card h-100 text-center">
-                <img src="related2.jpg" class="card-img-top" alt="Sản phẩm liên quan 2">
+                <img src="./img/logo.jfif" class="card-img-top" alt="Sản phẩm liên quan 2">
                 <div class="card-body">
                     <h6 class="card-title">Sản phẩm liên quan 2</h6>
                     <p class="text-danger fw-bold">1.000.000 VNĐ</p>
@@ -112,3 +130,48 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    const gallery = document.getElementById('thumbnailGallery');
+    const allThumbnails = Array.from(document.querySelectorAll('#allThumbnails img'));
+    const total = allThumbnails.length;
+    let currentIndex = 0;
+
+    // Hàm tính số ảnh hiển thị theo kích thước màn hình
+    function getVisibleCount() {
+        const width = window.innerWidth;
+        if (width < 576) return 1; // mobile
+        else if (width < 768) return 2; // tablet
+        else return 3; // desktop
+    }
+
+    function renderThumbnails() {
+        const visibleCount = getVisibleCount();
+        gallery.innerHTML = '';
+        for (let i = 0; i < visibleCount; i++) {
+            const index = (currentIndex + i) % total;
+            const clone = allThumbnails[index].cloneNode(true);
+            clone.className = 'img-thumbnail';
+            clone.style.width = '80px';
+            clone.style.height = '60px';
+            gallery.appendChild(clone);
+        }
+    }
+
+    function nextThumbnails() {
+        currentIndex = (currentIndex + 1) % total;
+        renderThumbnails();
+    }
+
+    function prevThumbnails() {
+        currentIndex = (currentIndex - 1 + total) % total;
+        renderThumbnails();
+    }
+
+    // Cập nhật khi resize màn hình
+    window.addEventListener('resize', renderThumbnails);
+
+    // Lần đầu load
+    renderThumbnails();
+</script>
