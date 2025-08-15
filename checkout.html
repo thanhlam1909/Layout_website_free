@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h2 class="mb-4 text-center">Thanh toán</h2>
+        <div class="row g-4">
+            <!-- Thông tin người nhận -->
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Thông tin người nhận</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nguyễn Văn A">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="0123456789">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Địa chỉ nhận hàng</label>
+                                <textarea class="form-control" id="address" rows="2" placeholder="Số nhà, đường, quận, thành phố"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="note" class="form-label">Lời nhắn</label>
+                                <input type="text" class="form-control" id="note" placeholder="Để lại lời nhắn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Tóm tắt giỏ hàng & thanh toán -->
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Tóm tắt giỏ hàng</h5>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    Sản phẩm A <span class="text-muted">(x2)</span>
+                                </div>
+                                <span>500.000₫</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    Sản phẩm B <span class="text-muted">(x1)</span>
+                                </div>
+                                <span>300.000₫</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nút mở khung khuyến mãi-->
+
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                            <label class="form-label mb-0">Mã khuyến mãi</label>
+                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#promoModal">Chọn mã</button>
+                        </div>
+
+
+                        <!-- Modal danh sách khuyến mãi -->
+                        <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="promoModalLabel">Danh sách mã khuyến mãi</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item list-group-item-action" onclick="selectPromo('SALE10')">SALE10 - Giảm 10%</li>
+                                            <li class="list-group-item list-group-item-action" onclick="selectPromo('FREESHIP')">FREESHIP - Miễn phí vận chuyển</li>
+                                            <li class="list-group-item list-group-item-action" onclick="selectPromo('DISCOUNT50')">DISCOUNT50 - Giảm 50.000₫</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="note" class="form-label">Lời nhắn</label>
+                                <input type="text" class="form-control" id="note" placeholder="Để lại lời nhắn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Phương thữc thanh toán -->
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Phương thức thanh toán</h5>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="cod" checked>
+                                <label class="form-check-label" for="cod">
+                                    Thanh toán khi nhận hàng (COD)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="card">
+                                <label class="form-check-label" for="card">
+                                    Thẻ ngân hàng / Thẻ tín dụng
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Tổng cộng riêng -->
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Tổng cộng</h5>
+                        <ul class="list-group">
+                            <!-- Tạm tính -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Tạm tính</span>
+                                <strong>800.000₫</strong>
+                            </li>
+
+                            <!-- Voucher cho đơn hàng -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Voucher giảm đơn hàng</span>
+                                <strong>-100.000₫</strong>
+                            </li>
+
+                            <!-- Phí vận chuyển -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Phí vận chuyển</span>
+                                <strong>50.000₫</strong>
+                            </li>
+
+                            <!-- Voucher free ship -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center text-success">
+                                <span>Voucher Free Ship</span>
+                                <strong>-50.000₫</strong>
+                            </li>
+
+                            <!-- Tổng cộng -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Tổng cộng</strong>
+                                <strong>650.000₫</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <button class="btn btn-primary w-100">Xác nhận thanh toán</button>
+                    </div>
+                </div>
+            </div>
+
+</body>
+
+</html>

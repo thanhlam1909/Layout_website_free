@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Page</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white">
+        <div class="mx-auto px-3" style="max-width: 80%;">
+
+            <!-- Top Header/Navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-primary py-2">
+                <div class="container-limited d-flex align-items-center justify-content-between w-100">
+                    <!-- Logo -->
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="./img/image.png" alt="Logo" height="100" class="me-2" />
+                        <strong>MyWebsite</strong>
+                    </a>
+                    <section class="main-header d-md-none " id="moblile-header">
+                        <!-- Mobile Toggle Button (visible only on mobile) -->
+                        <div class="d-flex d-md-none align-items-center">
+                            <!-- Cart Icon (mobile) -->
+                            <a href="#cart" class="text-white me-3 cart-icon">
+                                <span class="material-icons">shopping_cart</span>
+                                <span class="cart-badge">3</span>
+                                <!-- Số lượng sản phẩm trong giỏ -->
+                            </a>
+
+                            <!-- Toggle Button to open the offcanvas -->
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <!-- Offcanvas Menu (for mobile) -->
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                            <div class="offcanvas-header">
+                                <div class="d-flex justify-content-between align-items-center w-100">
+                                    <!-- Phần trái: Tiêu đề Menu -->
+                                    <div class="offcanvas-title flex-grow-1" id="mobileMenuLabel">
+                                        <h5 class="mb-0">MyWebsite</h5>
+                                    </div>
+                                    <div class="d-flex align-items-center ms-3">
+                                        <a href="#cart" class="text-white me-3 cart-icon">
+                                            <span class="material-icons">shopping_cart</span>
+                                            <span class="cart-badge">3</span>
+                                            <!-- Số lượng sản phẩm trong giỏ -->
+                                        </a>
+                                    </div>
+                                    <!-- Nút đóng -->
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="offcanvas-body">
+                                <!-- Search Bar (inside offcanvas for mobile) -->
+                                <div class="search-box mb-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+                                        <button class="btn btn-light" type="button">
+                                            <span class="material-icons">search</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Danh mục Dropdown (Mobile) -->
+                                <div class="mb-3">
+                                    <a class="mb-2 d-flex align-items-center text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#categoryMenu" aria-expanded="false" aria-controls="categoryMenu">
+                                        <span class="material-icons me-2">category</span>
+                                        <span>Danh mục</span>
+                                    </a>
+                                    <div class="collapse mt-2" id="categoryMenu">
+                                        <!-- Các mục con trong danh mục -->
+                                        <ul class="list-unstyled ps-3">
+                                            <li class="mb-2">
+                                                <a class="text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#fashionMen" aria-expanded="false" aria-controls="fashionMen">
+                                                    Thời trang nam
+                                                </a>
+                                                <div class="collapse mt-2" id="fashionMen">
+                                                    <ul class="list-unstyled ps-3">
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Áo sơ mi</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Quần jeans</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Giày thể thao</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#fashionWomen" aria-expanded="false" aria-controls="fashionWomen">
+                                                    Thời trang nữ
+                                                </a>
+                                                <div class="collapse mt-2" id="fashionWomen">
+                                                    <ul class="list-unstyled ps-3">
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Đầm dạ hội</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Túi xách</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Giày cao gót</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#accessories" aria-expanded="false" aria-controls="accessories">
+                                                    Phụ kiện
+                                                </a>
+                                                <div class="collapse mt-2" id="accessories">
+                                                    <ul class="list-unstyled ps-3">
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Đồng hồ</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Mắt kính</a></li>
+                                                        <li class="mb-2"><a class="text-white text-decoration-none" href="#">Nón</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- User Dropdown (inside offcanvas) -->
+                                <div class="mb-3">
+                                    <a class="mb-2 d-flex align-items-center text-white text-decoration-none" href="#" data-bs-toggle="collapse" data-bs-target="#accountMenu" aria-expanded="false" aria-controls="accountMenu">
+                                        <span class="material-icons me-2">account_circle</span>
+                                        <span>Tài khoản</span>
+                                    </a>
+                                    <div class="collapse mt-2" id="accountMenu">
+                                        <ul class="list-unstyled ps-3">
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#login"><span class="material-icons me-2">login</span>Đăng nhập</a></li>
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#sign_up"><span class="material-icons me-2">person_add</span>Đăng ký</a></li>
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#"><span class="material-icons me-2">history</span>Lịch sử giao dịch</a></li>
+                                            <li class="mb-2"><a class="text-white text-decoration-none" href="#"><span class="material-icons me-2">settings</span>Cài đặt</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li class="mb-2"><a class="text-danger text-decoration-none" href="#"><span class="material-icons me-2">logout</span>Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Links (in offcanvas) -->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-white text-decoration-none mb-2">
+                                        <span class="material-icons me-2">local_shipping</span> Miễn phí vận chuyển
+                                    </a>
+                                    <a href="#warranty" class="text-white text-decoration-none mb-2">
+                                        <span class="material-icons me-2">verified</span> Bảo hành
+                                    </a>
+                                    <a href="#" class="text-white text-decoration-none mb-2">
+                                        <span class="material-icons me-2">star</span> Chất lượng đảm bảo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="search-box mx-3 d-none d-md-block">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+                            <button class="btn btn-light" type="button">
+                            <span class="material-icons">search</span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Elements (hidden on mobile) -->
+                    <div class="d-none d-md-flex align-items-center">
+                        <!-- Search Bar -->
+
+                        <!-- Right Navigation -->
+                        <div class="d-flex align-items-center">
+                            <!-- Cart Icon -->
+                            <a href="#cart" class="text-white me-3 cart-icon">
+                                <span class="material-icons">shopping_cart</span>
+                                <span class="cart-badge">3</span>
+                            </a>
+
+                            <!-- User Dropdown with updated design -->
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-icons me-2">account_circle</span>
+                                    <span>Tài khoản</span>
+                                </a>
+                                <!-- Thêm các class animation và border -->
+                                <ul class="dropdown-menu dropdown-menu-end shadow border border-primary rounded-3 animate__animated animate__fadeInUp animate__faster" aria-labelledby="userDropdown">
+                                    <!-- Thêm header với nền gradient -->
+                                    <li>
+                                        <div class="dropdown-item bg-gradient-primary  py-2 rounded-top-2">
+                                            <div class="d-flex align-items-center ">
+                                                <span class="material-icons me-2 ">person</span>
+                                                <span>Thông tin cá nhân</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Thêm hover effect cho các item -->
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#login">
+                                            <span class="material-icons me-2 text-primary">login</span>
+                                            <span>Đăng nhập</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#sign_up">
+                                            <span class="material-icons me-2 text-success">person_add</span>
+                                            <span>Đăng ký</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- Thêm divider -->
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#">
+                                            <span class="material-icons me-2 text-info">history</span>
+                                            <span>Lịch sử giao dịch</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item hover-bg-light d-flex align-items-center py-2" href="#">
+                                            <span class="material-icons me-2 text-secondary">settings</span>
+                                            <span>Cài đặt</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- Thêm divider -->
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <!-- Nút đăng xuất với hover effect đặc biệt -->
+                                    <li>
+                                        <a class="dropdown-item text-danger hover-bg-danger-subtle d-flex align-items-center py-2" href="#">
+                                            <span class="material-icons me-2">logout</span>
+                                            <span>Đăng xuất</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Bottom Header with Categories (hidden on mobile) -->
+            <div class="header-bottom py-2 d-none d-md-block">
+                <div class="container-limited">
+                    <div class="row align-items-center">
+                        <!-- Categories Dropdown -->
+                        <div class="d-flex align-items-center flex-wrap justify-content-end">
+                            <!-- Danh mục dropdown -->
+
+                            <div class="col-md-3 d-flex justify-content-start">
+                                <div class="dropdown position-static me-3 ms-0">
+                                    <a class="btn  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="material-icons">category</span> Danh mục
+                                    </a>
+                                    <div class="dropdown-menu w-100 mt-0 p-4 shadow border-0">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h6 class="fw-bold mb-2">Thời trang nam</h6>
+                                                    <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                                                        <li><a class="dropdown-item" href="#">Quần jeans</a></li>
+                                                        <li><a class="dropdown-item" href="#">Giày thể thao</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="fw-bold mb-2">Thời trang nữ</h6>
+                                                    <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Đầm dạ hội</a></li>
+                                                        <li><a class="dropdown-item" href="#">Túi xách</a></li>
+                                                        <li><a class="dropdown-item" href="#">Giày cao gót</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="fw-bold mb-2">Phụ kiện</h6>
+                                                    <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Đồng hồ</a></li>
+                                                        <li><a class="dropdown-item" href="#">Mắt kính</a></li>
+                                                        <li><a class="dropdown-item" href="#">Nón</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6 class="fw-bold mb-2">Khuyến mãi</h6>
+                                                    <p class="small">🔥 Giảm giá đến 50% cho đơn hàng đầu tiên!</p>
+                                                    <a class="btn btn-sm btn-warning" href="#">Xem ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Additional Links -->
+                            <div class="col-md-9 d-flex justify-content-end">
+                                <div class="d-flex align-items-center">
+                                    <!-- Free Shipping -->
+                                    <div class="header-info-item me-4">
+                                        <a href="#" class="text-white d-flex align-items-center text-decoration-none">
+                                            <span class="material-icons me-2 fs-5">local_shipping</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="fw-medium">Miễn phí vận chuyển</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="nav-divider"></div>
+
+                                    <!-- Warranty -->
+                                    <div class="header-info-item mx-4">
+                                        <a href="#warranty" class="text-white d-flex align-items-center text-decoration-none">
+                                            <span class="material-icons me-2 fs-5">verified</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="fw-medium">Bảo hành</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="nav-divider"></div>
+
+                                    <!-- Quality Guarantee -->
+                                    <div class="header-info-item ms-4">
+                                        <a href="#" class="text-white d-flex align-items-center text-decoration-none">
+                                            <span class="material-icons me-2 fs-5">star</span>
+                                            <div class="d-flex flex-column">
+                                                <span class="fw-medium">Chất lượng đảm bảo</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    ` </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="d-flex align-items-center justify-content-center  ">
+
+        <div id="auth-container" class="card cart-layout shadow-lg p-4" style="width:80%;">
+            <!-- Nội dung đăng nhập -->
+        </div>
+
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container" style="max-width: 80%;">
+            <div class="row justify-content-center">
+                <!-- Thông tin công ty -->
+
+                <div class="about-us col-md-4 ">
+                    <div class=" text-right text-md-left">
+                        <h5>MySecureApp</h5>
+                        <p>Leading the way in industrial security solutions.</p>
+                    </div>
+                </div>
+                <!-- Các liên kết nhanh -->
+                <div class="col-md-4 text-right">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#privacy-policy" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#terms" class="text-light text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="#about" class="text-light text-decoration-none">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- Mạng xã hội sử dụng Flexbox và căn bên phải -->
+                <div class="col-md-4 text-center">
+                    <div class="social-links text-center">
+                        <h6>Follow Us</h6>
+                        <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                            <li class="mr-3">
+                                <a href="https://facebook.com" class="text-light social-icon m-2"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="mr-3">
+                                <a href="https://linkedin.com" class="text-light social-icon m-2"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="mr-3">
+                                <a href="https://twitter.com" class="text-light social-icon m-2"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="mr-3">
+                                <a href="https://instagram.com" class="text-light social-icon m-2"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://youtube.com" class="text-light social-icon"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <small>&copy; 2025 MySecureApp. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cartjs@2.0.0/dist/cart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>
