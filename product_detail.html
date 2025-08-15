@@ -1,0 +1,177 @@
+<div class="container ">
+    <div class="row col-12">
+        <!-- Cột ảnh sản phẩm -->
+        <div class="col-md-6">
+            <section class="product-images">
+                <img src="./img/logo.jfif" alt="Tên sản phẩm" class="img-fluid  mx-auto d-block" style="width: 300px; height: 300px; object-fit: contain;">
+
+                <!-- Danh sách ảnh gốc ẩn đi -->
+                <div id="allThumbnails" class="d-none class=" thumbnail-img "">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 1">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 2">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 3">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 4">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 5">
+                    <img class="thumbnail-img" src="./img/hinh_mau_laptop.webp" alt="Thumbnail 6">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 7">
+                    <img class="thumbnail-img" src="./img/logo.jfif" alt="Thumbnail 8">
+
+                </div>
+
+                <!-- Thumbnail ngang + 2 nút hai bên -->
+                <div class="d-flex align-items-center justify-content-center gap-2 my-1">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="prevThumbnails()">←</button>
+                    <div id="thumbnailGallery" class="d-flex gap-2 flex-shrink-1">
+                        <!-- Render bằng JS -->
+                    </div>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="nextThumbnails()">→</button>
+                </div>
+
+
+                <!-- Mô tả -->
+                <div class="bg-light p-3 mt-3 rounded shadow-sm" style="opacity: 0.5;">
+                    <h6 class="mb-1">Thông tin chi tiết sản phẩm</h6>
+                    <p class="text-muted small mb-0">Chất liệu: Nhựa cao cấp...</p>
+                    <button id="openModalButton" class="btn btn-link text-center d-block mx-auto mt-2" style="font-size: 1.2rem;">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Cột thông tin sản phẩm -->
+        <div class="col-md-6 mt-3 mt-md-0">
+            <section class="product-info">
+                <h1 class="product-name">Tên Sản Phẩm</h1>
+                <p class="product-type">Loại sản phẩm: <span>Điện tử</span></p>
+
+                <div class="pricing mb-3">
+                    <span class="text-muted text-decoration-line-through">1.500.000 VNĐ</span>
+                    <span class="text-danger fw-bold ms-2">1.200.000 VNĐ</span>
+                </div>
+
+                <div class="rating mb-3">
+                    <span class="stars text-warning">★★★★☆</span>
+                    <span class="rating-count">(4.5/5 - 120 đánh giá)</span>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary mb-2">Thêm vào giỏ hàng</button>
+                    <button class="btn btn-success mb-2">Mua ngay</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chi tiết sản phẩm -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productDetailsModalLabel">Thông tin chi tiết sản phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Chất liệu: Nhựa cao cấp</li>
+                    <li class="list-group-item">Kích thước: 20x15x5 cm</li>
+                    <li class="list-group-item">Trọng lượng: 300g</li>
+                    <li class="list-group-item">Bảo hành: 12 tháng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Đánh giá khách hàng -->
+<section class="product-reviews mt-5">
+    <h2 class="h4 border-start border-primary ps-3 mb-4">Đánh giá từ khách hàng</h2>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h6 class="card-title mb-1">Nguyễn Văn A</h6>
+            <div class="text-warning mb-2">★★★★★</div>
+            <p class="card-text">Sản phẩm rất tốt, đáng tiền!</p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <h6 class="card-title mb-1">Trần Thị B</h6>
+            <div class="text-warning mb-2">★★★★☆</div>
+            <p class="card-text">Giao hàng nhanh, chất lượng ổn.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sản phẩm liên quan -->
+<section class="related-products mt-5">
+    <h2 class="h4 border-start border-success ps-3 mb-4">Sản phẩm liên quan</h2>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card h-100 text-center">
+                <img src="./img/hinh_mau_laptop.webp" class="card-img-top" alt="Sản phẩm liên quan 1">
+                <div class="card-body">
+                    <h6 class="card-title">Sản phẩm liên quan 1</h6>
+                    <p class="text-danger fw-bold">900.000 VNĐ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 text-center">
+                <img src="./img/logo.jfif" class="card-img-top" alt="Sản phẩm liên quan 2">
+                <div class="card-body">
+                    <h6 class="card-title">Sản phẩm liên quan 2</h6>
+                    <p class="text-danger fw-bold">1.000.000 VNĐ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    const gallery = document.getElementById('thumbnailGallery');
+    const allThumbnails = Array.from(document.querySelectorAll('#allThumbnails img'));
+    const total = allThumbnails.length;
+    let currentIndex = 0;
+
+    // Hàm tính số ảnh hiển thị theo kích thước màn hình
+    function getVisibleCount() {
+        const width = window.innerWidth;
+        if (width < 576) return 1; // mobile
+        else if (width < 768) return 2; // tablet
+        else return 3; // desktop
+    }
+
+    function renderThumbnails() {
+        const visibleCount = getVisibleCount();
+        gallery.innerHTML = '';
+        for (let i = 0; i < visibleCount; i++) {
+            const index = (currentIndex + i) % total;
+            const clone = allThumbnails[index].cloneNode(true);
+            clone.className = 'img-thumbnail';
+            clone.style.width = '80px';
+            clone.style.height = '60px';
+            gallery.appendChild(clone);
+        }
+    }
+
+    function nextThumbnails() {
+        currentIndex = (currentIndex + 1) % total;
+        renderThumbnails();
+    }
+
+    function prevThumbnails() {
+        currentIndex = (currentIndex - 1 + total) % total;
+        renderThumbnails();
+    }
+
+    // Cập nhật khi resize màn hình
+    window.addEventListener('resize', renderThumbnails);
+
+    // Lần đầu load
+    renderThumbnails();
+</script>
