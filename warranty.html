@@ -21,68 +21,43 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Phần điều hướng -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item "><a href="index.html" class="text-dark text-decoration-none">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Đăng nhập</li>
-            </ol>
-        </nav>
-        <div id="auth-container" class="card login-card shadow-lg p-4">
-            <h5 class="card-title text-center mb-4" id="formTitle">
-                Đăng nhập
-            </h5>
-            <form id="authForm" class="login-card">
-                <div id="nameField" class="mb-3 d-none">
-                    <label for="name" class="form-label">
-                        <span class="material-icons">person</span> Họ và tên
-                    </label>
-                    <input type="text" class="form-control" id="name" placeholder="Họ và tên của bạn" />
-                </div>
-                <div class="mb-3">
-                    <label for="identifier" class="form-label">
-                      <span class="material-icons">person_search</span> Email hoặc Tài khoản
-                    </label>
-                    <input type="text" class="form-control" id="identifier" placeholder="Nhập email hoặc tên tài khoản" required />
-                </div>
+    <div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <h5 class="card-title mb-3">Chính sách bảo hành chi tiết</h5>
+            <p class="card-text">
+                Chúng tôi cam kết cung cấp dịch vụ bảo hành **chính xác, minh bạch và nhanh chóng** cho tất cả sản phẩm. Dưới đây là chi tiết quyền lợi và điều kiện bảo hành:
+            </p>
 
-                <div class="mb-3">
-                    <label for="password" class="form-label">
-                        <span class="material-icons">vpn_key</span> Mật khẩu
-                    </label>
-                    <input type="password" class="form-control" id="password" placeholder="Mật khẩu của bạn" />
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary" id="submitBtn">
-                        <span class="material-icons">login</span> Đăng nhập
-                    </button>
-                </div>
-            </form>
+            <h6>1. Thời gian và phạm vi bảo hành</h6>
+            <ul>
+                <li>Thời gian bảo hành: <strong>12 tháng</strong> kể từ ngày mua, theo hóa đơn hoặc phiếu bảo hành chính thức.</li>
+                <li>Phạm vi bảo hành: Lỗi kỹ thuật do nhà sản xuất, linh kiện hỏng, phần mềm lỗi (nếu có) hoặc các sự cố không do người dùng gây ra.</li>
+            </ul>
 
+            <h6>2. Quy trình bảo hành</h6>
+            <ul>
+                <li>Khách hàng mang sản phẩm kèm hóa đơn hoặc phiếu bảo hành đến cửa hàng, hoặc gửi yêu cầu trực tuyến kèm thông tin chi tiết về lỗi.</li>
+                <li>Nhân viên kỹ thuật kiểm tra và xác nhận lỗi trong vòng <strong>24–48 giờ</strong>.</li>
+                <li>Trong thời gian bảo hành, sản phẩm sẽ được <strong>sửa chữa, thay thế linh kiện hoặc đổi sản phẩm mới</strong> tùy theo tình trạng hư hỏng.</li>
+                <li>Mọi thông tin về quá trình bảo hành được cập nhật minh bạch và thông báo cho khách hàng.</li>
+            </ul>
 
-            <!-- Các nút đăng nhập mạng xã hội chỉ với logo -->
-            <div class="d-flex justify-content-center mt-4">
-                <!-- Google -->
-                <button class="btn btn-outline-danger mx-2 p-3" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
-              <i class="fab fa-google text-danger"></i>
-          </button>
-                <!-- Facebook -->
-                <button class="btn btn-outline-primary mx-2 p-3" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
-              <i class="fab fa-facebook-f text-primary"></i>
-          </button>
-                <!-- Twitter -->
-                <button class="btn btn-outline-info mx-2 p-3" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
-              <i class="fab fa-twitter text-info"></i>
-          </button>
-            </div>
+            <h6>3. Các trường hợp không được bảo hành</h6>
+            <ul>
+                <li>Hư hỏng do sử dụng sai hướng dẫn, va đập, rơi rớt, ngấm nước hoặc cháy nổ.</li>
+                <li>Thiết bị bị tự ý tháo gỡ, sửa chữa tại nơi không được ủy quyền.</li>
+                <li>Hư hỏng do tai nạn, thiên tai, sét đánh hoặc các sự cố ngoài tầm kiểm soát.</li>
+                <li>Hư hỏng do sử dụng linh kiện, phụ kiện không chính hãng.</li>
+                <li>Thiếu hóa đơn, phiếu bảo hành hợp lệ hoặc bảo hành đã hết hạn.</li>
+            </ul>
 
-            <div class="text-center mt-3">
-                <small>
-              Don't have an account?
-              <a href="#sign_up">Đăng kí</a>
-          </small>
-            </div>
+            <h6>4. Cam kết của chúng tôi</h6>
+            <ul>
+                <li>Mọi sản phẩm bảo hành đều được xử lý **theo đúng cam kết và chính xác**, đảm bảo quyền lợi tối đa cho khách hàng.</li>
+                <li>Khách hàng luôn được thông báo về tình trạng sản phẩm trong suốt quá trình bảo hành.</li>
+            </ul>
+
+            <p class="text-muted"><small>Lưu ý: Chính sách này áp dụng cho mọi sản phẩm mua tại cửa hàng hoặc trên website chính thức của chúng tôi.</small></p>
         </div>
     </div>
 </body>
